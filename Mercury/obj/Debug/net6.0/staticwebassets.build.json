@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "pNe6UiS9sqC+hO+j1MsNfIOrD6KdW50Y/EbtV9PyBLI=",
+  "Source": "Mercury",
+  "BasePath": "_content/Mercury",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Mercury\\wwwroot",
+      "Source": "Mercury",
+      "ContentRoot": "C:\\Users\\Home\\Desktop\\my-user\\it\\C lessons\\Mercury\\Mercury\\wwwroot\\",
+      "BasePath": "_content/Mercury",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
