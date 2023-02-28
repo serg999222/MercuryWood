@@ -1,3 +1,4 @@
+using Mercury.Service;
 using Microsoft.CodeAnalysis;
 
 internal class Program
@@ -6,6 +7,8 @@ internal class Program
 	{
 		
 		var builder = WebApplication.CreateBuilder(args);
+		builder.Configuration.Bind("Project", new Config());
+
 		builder.Services.AddControllersWithViews();
 		
 		var app = builder.Build();
