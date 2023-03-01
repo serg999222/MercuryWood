@@ -22,7 +22,7 @@ internal class Program
 		builder.Services.AddTransient<ITextFieldRepository, MockTextFieldRepository>();
 
 		//Підключаємо контекст БД
-		builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer)
+		builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(Config.ConnectionString));
 
 		builder.Services.AddControllersWithViews();
 
