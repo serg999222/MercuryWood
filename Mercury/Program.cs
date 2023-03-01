@@ -2,6 +2,7 @@ using Mercury.Domain;
 using Mercury.Domain.Repositories.Abstract;
 using Mercury.Domain.Repositories.EntityFramework;
 using Mercury.Service;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,7 +10,7 @@ internal class Program
 {
 	private static void Main(string[] args)
 	{
-		
+
 		var builder = WebApplication.CreateBuilder(args);
 
 		//Підключаємо конфіг із appsettings.json зв'язуємо appsettings.json з Config
@@ -20,11 +21,32 @@ internal class Program
 		builder.Services.AddTransient<IProductsRepository, MockProductsRepository>();
 		builder.Services.AddTransient<IServiceItemsRepository, MockServiceItemsRepository>();
 		builder.Services.AddTransient<ITextFieldRepository, MockTextFieldRepository>();
+		builder.Services.AddTransient<DataManager>();
 
 		//Підключаємо контекст БД
 		builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(Config.ConnectionString));
 
-		builder.Services.AddControllersWithViews();
+		builder.Services.AddIdentity<IdentityUser, IdentityRole>(opts =>
+		{
+			opts.User.RequireUniqueEmail = true;
+			opts.Password.RequiredLength = 6;
+			opts.Password.RequireNonAlphanumeric = false;
+			opts.Password.RequireLowercase = false;
+			opts.Password.RequireUppercase = false;
+			opts.Password.RequireDigit = false;
+		}).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
+
+		builder.Services.ConfigureApplicationCookie(options =>
+		{
+			options.Cookie.Name = "MercuryWoodAuth";
+			options.Cookie.HttpOnly = true;
+			options.LoginPath = "/account/login";
+			options.AccessDeniedPath = "/account/accessdenied";
+			options.SlidingExpiration = true;
+		});
+
+		builder.Services.AddControllersWithViews().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider();
 
 		
 		var app = builder.Build();
@@ -43,7 +65,9 @@ internal class Program
 
 		app.UseRouting();
 
-/*		app.UseAuthorization();*/
+		app.UseCookiePolicy();
+		app.UseAuthentication();
+		app.UseAuthorization();
 
 		app.MapControllerRoute(
 			name: "default",
