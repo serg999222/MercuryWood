@@ -46,7 +46,7 @@ internal class Program
 			options.SlidingExpiration = true;
 		});
 
-		builder.Services.AddControllersWithViews().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider();
+		builder.Services.AddControllersWithViews();
 
 		
 		var app = builder.Build();
