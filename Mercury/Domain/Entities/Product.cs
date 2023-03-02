@@ -4,17 +4,24 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mercury.Domain.Entities
 {
-	public class Product : EntityBase
+	public class Product 
 	{
+		[Required]
+		public Guid Id { get; set; }
+
 		[Display(Name = "Назва товару")]
-		public override string Title { get; set; }
+		public  string? Title { get; set; }
 
 		[Display(Name = "Ціна")]
 		public decimal Price { get; set; }
-		
+
+		[Display(Name = "Короткий опис")]
+		public  string? SubTitle { get; set; }
+
+		/*[ForeignKey("CategoryId")]*/
+		[InverseProperty("Products")]
 		public int CategoryId { get; set; }
 
-		public Category Category { get; set; }
 
 
 	}

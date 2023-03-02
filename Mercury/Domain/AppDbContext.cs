@@ -73,11 +73,13 @@ namespace Mercury.Domain
 				Title = "Контакти"
 			});
 
+
+
 			builder.Entity<Category>().HasData(new Category
 			{
-				CategoryId = 1,
+				Id = 1,
 				Name = "Столи",
-
+				Description = "Столи"
 			});
 
 			builder.Entity<Product>().HasData(new Product
@@ -85,7 +87,8 @@ namespace Mercury.Domain
 				Id = new Guid("61d72b51-2294-4f0f-99e5-63bcbdf34991"),
 				Title = "Стіл дубовий",
 				Price = 17500,
-				CategoryId = 1,
+				SubTitle = "Стіл Дубовий",
+				CategoryId = 1
 
 			});
 
