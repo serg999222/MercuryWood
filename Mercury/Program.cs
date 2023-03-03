@@ -13,6 +13,7 @@ internal class Program
 
 		var builder = WebApplication.CreateBuilder(args);
 
+
 		//Підключаємо конфіг із appsettings.json зв'язуємо appsettings.json з Config
 		builder.Configuration.Bind("Project", new Config());
 
@@ -46,7 +47,16 @@ internal class Program
 			options.SlidingExpiration = true;
 		});
 
-		builder.Services.AddControllersWithViews();
+		//Налаштування політики авторизації для Admin area
+		builder.Services.AddAuthorization(x =>
+		{
+			x.AddPolicy("AdminArea", policy => { policy.RequireRole("admin"); });
+		});
+
+		builder.Services.AddControllersWithViews(x =>
+		{
+			x.Conventions.Add(new AdminAreaAutorisation("Admin", "AdminArea"));
+		});
 
 		
 		var app = builder.Build();
@@ -68,6 +78,10 @@ internal class Program
 		app.UseCookiePolicy();
 		app.UseAuthentication();
 		app.UseAuthorization();
+
+		app.MapControllerRoute(
+			name: "admin",
+			pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
 		app.MapControllerRoute(
 			name: "default",
