@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ypFgnHzvlL7LuPBk+/Ara3T7btVQcIKXzaEJlWq3yjc=",
+  "Hash": "L2rSwysQBI5sIovUR3Nsf9lV71rW1Pn/9lRvzxg8DqY=",
   "Source": "Mercury",
   "BasePath": "_content/Mercury",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\banner.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Home\\Desktop\\my-user\\it\\C lessons\\Mercury\\Mercury\\wwwroot\\images\\images.jpg",
+      "SourceId": "Mercury",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Home\\Desktop\\my-user\\it\\C lessons\\Mercury\\Mercury\\wwwroot\\",
+      "BasePath": "_content/Mercury",
+      "RelativePath": "images/images.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\images.jpg"
     },
     {
       "Identity": "C:\\Users\\Home\\Desktop\\my-user\\it\\C lessons\\Mercury\\Mercury\\wwwroot\\images\\pic01.jpg",
@@ -304,6 +321,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\pic11.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Home\\Desktop\\my-user\\it\\C lessons\\Mercury\\Mercury\\wwwroot\\images\\TeGT4PaoR_1-iaqdS9H_jQ.jpeg",
+      "SourceId": "Mercury",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Home\\Desktop\\my-user\\it\\C lessons\\Mercury\\Mercury\\wwwroot\\",
+      "BasePath": "_content/Mercury",
+      "RelativePath": "images/TeGT4PaoR_1-iaqdS9H_jQ.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\TeGT4PaoR_1-iaqdS9H_jQ.jpeg"
     },
     {
       "Identity": "C:\\Users\\Home\\Desktop\\my-user\\it\\C lessons\\Mercury\\Mercury\\wwwroot\\js\\breakpoints.min.js",

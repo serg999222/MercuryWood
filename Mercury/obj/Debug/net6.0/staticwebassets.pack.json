@@ -21,8 +21,16 @@
       "PackagePath": "staticwebassets\\css\\noscript.min.css"
     },
     {
+      "Id": "C:\\Users\\Home\\Desktop\\my-user\\it\\C lessons\\Mercury\\Mercury\\wwwroot\\images\\TeGT4PaoR_1-iaqdS9H_jQ.jpeg",
+      "PackagePath": "staticwebassets\\images\\TeGT4PaoR_1-iaqdS9H_jQ.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Home\\Desktop\\my-user\\it\\C lessons\\Mercury\\Mercury\\wwwroot\\images\\banner.jpg",
       "PackagePath": "staticwebassets\\images\\banner.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Home\\Desktop\\my-user\\it\\C lessons\\Mercury\\Mercury\\wwwroot\\images\\images.jpg",
+      "PackagePath": "staticwebassets\\images\\images.jpg"
     },
     {
       "Id": "C:\\Users\\Home\\Desktop\\my-user\\it\\C lessons\\Mercury\\Mercury\\wwwroot\\images\\pic01.jpg",
