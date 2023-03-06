@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mercury.Domain.Entities
 {
-	public class Product : EntityBase
+	public class Product
 	{
 		[Required]
 		public Guid Id { get; set; }
