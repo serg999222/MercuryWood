@@ -108,7 +108,7 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 /* Type */
 body, input, select, textarea {
   color: #ffffff;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Comfortaa", cursive;
   font-size: 17pt;
   font-weight: 300;
   letter-spacing: 0.025em;
@@ -2755,7 +2755,7 @@ body.is-preload #header.alt {
   display: -ms-flex;
   display: flex;
   padding: 6em 0 2em 0;
-  background-attachment: fixed;
+  background-image: url(../../images/photo_2021-11-01_09-55-50-510x638.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2783,7 +2783,7 @@ body.is-preload #header.alt {
   display: block;
   height: 100%;
   left: 0;
-  opacity: 0.85;
+  opacity: 0.75;
   position: absolute;
   top: 0;
   width: 100%;
