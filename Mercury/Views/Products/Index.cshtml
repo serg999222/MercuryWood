@@ -3,10 +3,15 @@
 	<div style="display:flex">
 	@foreach (Product product in Model)
 	{
-		<div style="margin: 15px;">
+		<a > 
+			<div style="margin: 15px;">
 			<p>@product.Title;</p>
 			<p>@product.SubTitle;</p>
+			<div>
+			  <img class="img-block" src="~/images/@product.TitleImagePath" />
+		    </div>
 			<p>@product.Price;</p>	
-		</div>
+			</div>
+		</a>
 	}
 </div>

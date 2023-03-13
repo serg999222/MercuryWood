@@ -67,6 +67,9 @@ namespace Mercury.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("TitleImagePath")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
@@ -165,7 +168,7 @@ namespace Mercury.Migrations
                         {
                             Id = new Guid("69c7a66e-00ed-44ea-9ad3-3d8e5c0aecdb"),
                             CodeWord = "PageIndex",
-                            DateAddet = new DateTime(2023, 3, 2, 7, 2, 55, 784, DateTimeKind.Utc).AddTicks(4980),
+                            DateAddet = new DateTime(2023, 3, 6, 14, 0, 19, 387, DateTimeKind.Utc).AddTicks(3042),
                             Text = "Вміст заповнюється Адміністратором",
                             Title = "Головна"
                         },
@@ -173,7 +176,7 @@ namespace Mercury.Migrations
                         {
                             Id = new Guid("bc7322d6-c85a-4453-b3b3-9a1a27ccb3f2"),
                             CodeWord = "ProductPage",
-                            DateAddet = new DateTime(2023, 3, 2, 7, 2, 55, 784, DateTimeKind.Utc).AddTicks(5053),
+                            DateAddet = new DateTime(2023, 3, 6, 14, 0, 19, 387, DateTimeKind.Utc).AddTicks(3113),
                             Text = "Вміст заповнюється Адміністратором",
                             Title = "Продукція"
                         },
@@ -181,7 +184,7 @@ namespace Mercury.Migrations
                         {
                             Id = new Guid("3be10c44-818a-46ce-a08b-74780181e903"),
                             CodeWord = "ServicePage",
-                            DateAddet = new DateTime(2023, 3, 2, 7, 2, 55, 784, DateTimeKind.Utc).AddTicks(5083),
+                            DateAddet = new DateTime(2023, 3, 6, 14, 0, 19, 387, DateTimeKind.Utc).AddTicks(3141),
                             Text = "Вміст заповнюється Адміністратором",
                             Title = "Додаткові послуги"
                         },
@@ -189,7 +192,7 @@ namespace Mercury.Migrations
                         {
                             Id = new Guid("35830bab-542d-4e42-8277-65800bc26053"),
                             CodeWord = "ContactsPage",
-                            DateAddet = new DateTime(2023, 3, 2, 7, 2, 55, 784, DateTimeKind.Utc).AddTicks(5110),
+                            DateAddet = new DateTime(2023, 3, 6, 14, 0, 19, 387, DateTimeKind.Utc).AddTicks(3167),
                             Text = "Вміст заповнюється Адміністратором",
                             Title = "Контакти"
                         });
@@ -225,7 +228,7 @@ namespace Mercury.Migrations
                         new
                         {
                             Id = "948526e8-1620-4365-8a6b-ec37517d275e",
-                            ConcurrencyStamp = "9afec324-3bc9-4ea2-8693-93d27740f285",
+                            ConcurrencyStamp = "f79fcb18-bb03-4fad-b390-3f985941ebef",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -325,13 +328,13 @@ namespace Mercury.Migrations
                         {
                             Id = "afea407f-e991-43f2-953a-1dabbf9bb024",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a1ca1236-7d5c-451c-9fcb-229d89d9bc2b",
+                            ConcurrencyStamp = "2d326bc1-865e-4bb1-a1bf-463eb0cb7a45",
                             Email = "myimail@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MYIMAIL@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGAQMbFpDowcBeYkebqf5w+OJ4qqGgIFJAEmWKJeq2O56uOCybHv8EeiNoBPoAcq/Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEOgN0W95CgYaL/AwY2yRLDSABYIUE0ULoe+ByxYg9iVG9rRbTCxS7Zns+FAWtlettQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,

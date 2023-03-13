@@ -74,7 +74,6 @@ namespace Mercury.Domain
 			});
 
 
-
 			builder.Entity<Category>().HasData(new Category
 			{
 				Id = 1,

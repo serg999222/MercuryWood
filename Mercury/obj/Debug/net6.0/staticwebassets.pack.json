@@ -141,6 +141,10 @@
       "PackagePath": "staticwebassets\\images\\pic11.jpg"
     },
     {
+      "Id": "C:\\Users\\Home\\Desktop\\my-user\\it\\C lessons\\Mercury\\Mercury\\wwwroot\\images\\wenom.webp",
+      "PackagePath": "staticwebassets\\images\\wenom.webp"
+    },
+    {
       "Id": "C:\\Users\\Home\\Desktop\\my-user\\it\\C lessons\\Mercury\\Mercury\\wwwroot\\js\\breakpoints.min.js",
       "PackagePath": "staticwebassets\\js\\breakpoints.min.js"
     },
