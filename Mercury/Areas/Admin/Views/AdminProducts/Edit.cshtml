@@ -1,0 +1,60 @@
+﻿@model Product
+@*@{
+	var i = ViewBag.Categoryes;
+}*@
+
+<div>
+	<h2>Редагувати продукт</h2>
+	<div style="max-width:700px; padding10 40px; margin:0 auto">
+		<form  asp-area="Admin" asp-controller="AdminProducts" asp-action="Edit" method="post" enctype="multipart/form-data">
+			<input type="hidden" asp-for="Id" />
+			<input type="hidden" asp-for="TitleImagePath" />
+
+			<div asp-validation-summary="All"></div>
+			<div class="div-box">
+				<label asp-for="Title"></label>
+				<input asp-for="Title" />
+				<span asp-validation-for="Title"></span>
+			</div>
+			
+			<div class="div-box">
+				<label asp-for="SubTitle"></label>
+				<input asp-for="SubTitle" />
+				<span asp-validation-for="SubTitle"></span>
+			</div>
+
+			<div class="div-box">
+				<label asp-for="CategoryId"></label>
+				@Html.DropDownList("CategoryId", ViewData["Name"] as SelectList)
+				<span asp-validation-for="CategoryId"></span>
+			</div>
+
+			<div style="margin-bottom:100px;"></div>
+
+			<div class="div-box" >
+				<label asp-for="TitleImagePath"></label>
+				@if (@Model.TitleImagePath != null)
+				{
+					<input type="file" name="titleImageFile" id="titleImageFile"></input>
+				}
+				else
+				{
+					<input type="file" name="titleImageFile" id="titleImageFile"></input>
+				}
+				<div>
+					<img class="img-block" src="~/images/@Model.TitleImagePath" />
+				</div>
+
+				
+
+			</div>
+
+
+			<div class="div-box">
+			<input type="submit" value="Зберегти" />
+			</div>
+		</form>
+	</div>
+</div>
+
+
